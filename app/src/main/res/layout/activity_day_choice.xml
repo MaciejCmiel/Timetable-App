@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <ProgressBar
+        android:id="@+id/progress_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:id="@+id/wrong_data_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        tools:text="Empty View text" />
+
+    <LinearLayout
+        android:id="@+id/days_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/monday"
+            style="@style/CategoryStyle"
+            android:background="@drawable/day_of_week"
+            android:text="@string/day_1" />
+
+        <TextView
+            android:id="@+id/tuesday"
+            style="@style/CategoryStyle"
+            android:background="@drawable/day_of_week"
+            android:text="@string/day_2" />
+
+        <TextView
+            android:id="@+id/wednesday"
+            style="@style/CategoryStyle"
+            android:background="@drawable/day_of_week"
+            android:text="@string/day_3" />
+
+        <TextView
+            android:id="@+id/thursday"
+            style="@style/CategoryStyle"
+            android:background="@drawable/day_of_week"
+            android:text="@string/day_4" />
+
+        <TextView
+            android:id="@+id/friday"
+            style="@style/CategoryStyle"
+            android:background="@drawable/day_of_week"
+            android:text="@string/day_5" />
+
+    </LinearLayout>
+
+</RelativeLayout>

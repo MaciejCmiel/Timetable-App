@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Timetable Project</string>
+    <string name="timetable">Plan Lekcji</string>
+    <string name="day_choice">Wybór dnia tygodnia</string>
+
+    <string-array name="year_array">
+        <item>2015L</item>
+        <item>2015Z</item>
+        <item>2016L</item>
+        <item>2016Z</item>
+        <item>2017L</item>
+        <item>2017Z</item>
+        <item>2018L</item>
+        <item>2018Z</item>
+        <item>2019L</item>
+        <item>2019Z</item>
+    </string-array>
+
+
+    <string-array name="semestr_array">
+        <item>2016L</item>
+        <item>2016Z</item>
+        <item>2017L</item>
+        <item>2017Z</item>
+        <item>2018L</item>
+        <item>2018Z</item>
+        <item>2019L</item>
+        <item>2019Z</item>
+    </string-array>
+
+    <!-- Category name for phrases [CHAR LIMIT=20] -->
+    <string name="day_1">Poniedziałek</string>
+
+    <!-- Category name for the vocabulary words for colors [CHAR LIMIT=20] -->
+    <string name="day_2">Wtorek</string>
+
+    <!-- Category name for the vocabulary words for numbers [CHAR LIMIT=20] -->
+    <string name="day_3">Środa</string>
+
+    <!-- Category name for the vocabulary words for family members [CHAR LIMIT=20] -->
+    <string name="day_4">Czwartek</string>
+
+    <!-- Category name for the vocabulary words for family members [CHAR LIMIT=20] -->
+    <string name="day_5">Piątek</string>
+
+    <string name="no_lessons_for_today">Nie masz tego dnia żadnych zajęć. Miłego dnia!</string>
+
+</resources>
