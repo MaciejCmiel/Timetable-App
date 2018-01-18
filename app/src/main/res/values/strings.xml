@@ -45,4 +45,6 @@
 
     <string name="no_lessons_for_today">Nie masz tego dnia żadnych zajęć. Miłego dnia!</string>
 
+    <string name="no_internet_connection">Nie można połączyć się z serwerem. \nUpewnij się czy masz włączone Wi-fi lub przesył danych.</string>
+
 </resources>

@@ -1,8 +1,11 @@
 package com.example.macx.projecttimetable;
 
 import android.app.LoaderManager;
+import android.content.Context;
 import android.content.Intent;
 import android.content.Loader;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -40,16 +43,33 @@ public class DayChoiceActivity extends AppCompatActivity
         mWrongDataTextView = (TextView) findViewById(R.id.wrong_data_text_view);
         mWrongDataTextView.setVisibility(View.INVISIBLE);
 
-        // Get a reference to the LoaderManager, in order to interact with loaders.
-        LoaderManager loaderManager = getLoaderManager();
+        ConnectivityManager cm =
+                (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
 
-        // Initialize the loader. Pass in the int ID constant defined above and pass in null for
-        // the bundle. Pass in this activity for the LoaderCallbacks parameter
-        loaderManager.initLoader(JSON_LOADER_ID, null, this);
+        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+        boolean isConnected = activeNetwork != null &&
+                activeNetwork.isConnectedOrConnecting();
 
+        if (isConnected) {
+            // Get a reference to the LoaderManager, in order to interact with loaders.
+            LoaderManager loaderManager = getLoaderManager();
 
+            // Initialize the loader. Pass in the int ID constant defined above and pass in null for
+            // the bundle. Pass in this activity for the LoaderCallbacks parameter
+            loaderManager.initLoader(JSON_LOADER_ID, null, this);
+
+        } else {
+
+            // Hide loading indicator because there is no internet connection
+            View loadingIndicator = findViewById(R.id.progress_indicator);
+            loadingIndicator.setVisibility(View.GONE);
+
+            mWrongDataTextView.setVisibility(View.VISIBLE);
+            mWrongDataTextView.setText(R.string.no_internet_connection);
+        }
 
     }
+
 
     @Override
     public Loader<String> onCreateLoader(int i, Bundle bundle) {
