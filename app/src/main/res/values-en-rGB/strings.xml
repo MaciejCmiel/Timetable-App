@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Timetable Project</string>
+    <string name="no_lessons_for_today">You don\'t have lessons today. Enjoy your day!</string>
+    <string name="no_internet_connection">No internet connection. Make sure Wi-fi or cellular data is on.</string>
+    <string name="day_5">Friday</string>
+    <string name="timetable">Lesson Timetable</string>
+    <string name="day_1">Monday</string>
+    <string name="day_3">Wednesday</string>
+    <string name="day_2">Tuesday</string>
+    <string name="day_choice">Choose day</string>
+    <string name="day_4">Thursday</string>
+    <string name="username_hint">Type your username</string>
+    <string name="apikey_hint">Type your API key</string>
+</resources>
