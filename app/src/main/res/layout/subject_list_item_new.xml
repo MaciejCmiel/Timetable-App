@@ -26,9 +26,10 @@
             tools:text="8:15 - 10:00" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -41,8 +42,9 @@
         <TextView
             android:id="@+id/subject_name_text_view"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="2"
+            android:layout_marginTop="8dp"
             android:gravity="bottom"
             android:textAppearance="?android:textAppearanceMedium"
             android:textColor="@android:color/black"
@@ -52,7 +54,7 @@
         <LinearLayout
             android:id="@+id/text_container_3"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="3"
             android:orientation="horizontal"
             android:paddingLeft="8dp">
@@ -80,10 +82,9 @@
                     android:id="@+id/type_of_classes"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="right"
+                    android:gravity="end"
                     android:paddingRight="16dp"
-                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textAppearance="?android:textAppearanceSmall"
                     android:textColor="@android:color/darker_gray"
                     tools:text="Typ zajęć" />
 
@@ -91,29 +92,26 @@
                     android:id="@+id/cycle_text_view"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="right"
+                    android:gravity="end"
                     android:paddingRight="16dp"
-                    android:text="I połowa sem."
-                    android:textAppearance="?android:textAppearanceMedium"
-                    android:textColor="@android:color/darker_gray" />
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textColor="@android:color/darker_gray"
+                    tools:text="I połowa sem." />
 
                 <TextView
                     android:id="@+id/location_text_view"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="right"
+                    android:gravity="end"
                     android:paddingRight="16dp"
-                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textAppearance="?android:textAppearanceSmall"
                     android:textColor="@android:color/darker_gray"
                     tools:text="Lokalizacja i numer sali" />
 
-
             </LinearLayout>
 
-
         </LinearLayout>
+
     </LinearLayout>
 
 </LinearLayout>

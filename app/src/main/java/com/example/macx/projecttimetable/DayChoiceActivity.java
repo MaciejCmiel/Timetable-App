@@ -96,7 +96,7 @@ public class DayChoiceActivity extends AppCompatActivity
                 mWrongDataTextView.setVisibility(View.VISIBLE);
                 mWrongDataTextView.setText(jsonResponse + "\n \n Skontaktuj się z:  " +
                         "isod.wsparcie@iem.pw.edu.pl" +
-                        "\nlub autorem aplikacji: " +
+                        "\nlub twórcą aplikacji: " +
                         "\nmaciej.cmiel.S@ee.pw.edu.pl");
             } else if (jsonResponse.startsWith("Brak")) {
                 mWrongDataTextView.setVisibility(View.VISIBLE);

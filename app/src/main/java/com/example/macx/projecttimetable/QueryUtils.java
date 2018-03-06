@@ -262,3 +262,4 @@ public final class QueryUtils {
         return list;
     }
 }
+
