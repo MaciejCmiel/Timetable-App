@@ -1,22 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:minHeight="88sp">
+    android:minHeight="112sp">
 
 
-    <TextView
-        android:id="@+id/time_text_view"
+    <LinearLayout
+        android:id="@+id/text_container_0"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_marginLeft="16dp"
-        android:gravity="center"
-        android:textAppearance="?android:textAppearanceMedium"
-        android:textColor="@android:color/black"
-        android:textStyle="bold"
-        tools:text="8:15 - 10:00" />
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/time_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            tools:text="8:15 - 10:00" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/text_container"
@@ -28,8 +41,9 @@
         <TextView
             android:id="@+id/subject_name_text_view"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="2"
+            android:layout_marginTop="8dp"
             android:gravity="bottom"
             android:textAppearance="?android:textAppearanceMedium"
             android:textColor="@android:color/black"
@@ -37,60 +51,56 @@
 
 
         <LinearLayout
-            android:id="@+id/text_container_2"
+            android:id="@+id/text_container_3"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
             android:orientation="horizontal"
             android:paddingLeft="8dp">
 
-            <TextView
-                android:id="@+id/type_of_classes"
+
+            <LinearLayout
+                android:id="@+id/text_container_2"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="left"
-                android:paddingRight="16dp"
-                android:textAppearance="?android:textAppearanceMedium"
-                android:textColor="@android:color/darker_gray"
-                tools:text="Typ zajęć" />
+                android:layout_weight="3"
+                android:orientation="horizontal"
+                android:paddingLeft="8dp">
 
-            <TextView
-                android:id="@+id/mode_text_view"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:paddingRight="16dp"
-                android:textAppearance="?android:textAppearanceMedium"
-                android:textColor="@android:color/darker_gray"
-                tools:text="I połowa sem." />
+                <TextView
+                    android:id="@+id/type_of_classes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="end"
+                    android:paddingRight="16dp"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textColor="@android:color/darker_gray"
+                    tools:text="W" />
 
-            <TextView
-                android:id="@+id/location_text_view"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:paddingRight="16dp"
-                android:textAppearance="?android:textAppearanceMedium"
-                android:textColor="@android:color/darker_gray"
-                tools:text="Lokalizacja i numer sali" />
+                <TextView
+                    android:id="@+id/cycle_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="end"
+                    android:paddingRight="16dp"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textColor="@android:color/darker_gray"
+                    tools:text="I połowa sem." />
 
+                <TextView
+                    android:id="@+id/location_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="end"
+                    android:paddingRight="16dp"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textColor="@android:color/darker_gray"
+                    tools:text="GG 306" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/lecturer_text_view"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:gravity="top"
-            android:paddingLeft="8dp"
-            android:textColor="@android:color/darker_gray"
-            android:textSize="16sp"
-            tools:text="Prowadzący" />
     </LinearLayout>
-
 
 </LinearLayout>
