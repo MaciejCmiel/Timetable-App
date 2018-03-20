@@ -17,6 +17,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import static com.example.macx.projecttimetable.DayChoiceActivity.LOG_TAG;
@@ -205,10 +207,15 @@ public final class QueryUtils {
         }
 
         // sort the lessons by startTime before return the list
-        ArrayList<Lesson> sortedLessons = bubbleSort(lessons);
+        Collections.sort(lessons, new Comparator<Lesson>() {
+            @Override
+            public int compare(Lesson lesson1, Lesson lesson2)
+            {
+                return  lesson1.getStartTime().compareTo(lesson2.getStartTime());
+            }
+        });
 
-        //return the list of Lessons
-        return sortedLessons;
+        return lessons;
     }
 
     /**
@@ -233,33 +240,5 @@ public final class QueryUtils {
         return formattedTime;
     }
 
-    /**
-     *  This method sorts list of lessons by startTime from lowest using bubble sort algorithm
-     *
-     * @param list list of lessons extracted from JSON
-     * @return sorted list of lessons
-     */
-    private static ArrayList<Lesson> bubbleSort (ArrayList<Lesson> list){
-
-        for (int j = 0; j < list.size() - 1; j++){
-            for(int i = 0; i < list.size() - 1; i++){
-                int low = Integer.parseInt(list.get(i).getStartTime().substring(0,2));
-                Log.i(LOG_TAG, "low = " + low);
-                int high = Integer.parseInt(list.get(i+1).getStartTime().substring(0,2));
-                Log.i(LOG_TAG, "high = " + high);
-
-                if( low > high){
-                    Lesson tempLow = list.get(i);
-                    Lesson tempHigh = list.get(i+1);
-                    list.remove(i);
-                    list.add(i, tempHigh);
-                    list.remove(i+1);
-                    list.add(i+1, tempLow);
-                }
-            }
-        }
-
-        return list;
-    }
 }
 

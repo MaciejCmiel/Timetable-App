@@ -52,7 +52,6 @@ public class LessonAdapter extends ArrayAdapter<Lesson> {
         TextView cycleTextView = (TextView) listItemView.findViewById(R.id.cycle_text_view);
         cycleTextView.setText(currentLesson.getCycle());
 
-
         return listItemView;
     }
 

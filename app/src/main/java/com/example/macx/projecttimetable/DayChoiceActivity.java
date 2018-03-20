@@ -22,9 +22,9 @@ public class DayChoiceActivity extends AppCompatActivity
 
     private static final int JSON_LOADER_ID = 1;
     public static final String LOG_TAG = DayChoiceActivity.class.getName();
-    private String mJsonResponseToGo = "";
+    private String jsonResponseToGo = "";
     private String queryUrl = "";
-    private TextView mWrongDataTextView;
+    private TextView wrongDataTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,8 +40,8 @@ public class DayChoiceActivity extends AppCompatActivity
         days.setVisibility(View.INVISIBLE);
 
         // hide the wrong data text view
-        mWrongDataTextView = (TextView) findViewById(R.id.wrong_data_text_view);
-        mWrongDataTextView.setVisibility(View.INVISIBLE);
+        wrongDataTextView = (TextView) findViewById(R.id.wrong_data_text_view);
+        wrongDataTextView.setVisibility(View.INVISIBLE);
 
         ConnectivityManager cm =
                 (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -64,8 +64,8 @@ public class DayChoiceActivity extends AppCompatActivity
             View loadingIndicator = findViewById(R.id.progress_indicator);
             loadingIndicator.setVisibility(View.GONE);
 
-            mWrongDataTextView.setVisibility(View.VISIBLE);
-            mWrongDataTextView.setText(R.string.no_internet_connection);
+            wrongDataTextView.setVisibility(View.VISIBLE);
+            wrongDataTextView.setText(R.string.no_internet_connection);
         }
 
     }
@@ -93,21 +93,21 @@ public class DayChoiceActivity extends AppCompatActivity
         if (jsonResponse != null) {
 
             if (jsonResponse.startsWith("Exception")) {
-                mWrongDataTextView.setVisibility(View.VISIBLE);
-                mWrongDataTextView.setText(jsonResponse + "\n \n Skontaktuj się z:  " +
+                wrongDataTextView.setVisibility(View.VISIBLE);
+                wrongDataTextView.setText(jsonResponse + "\n \n Skontaktuj się z:  " +
                         "isod.wsparcie@iem.pw.edu.pl" +
                         "\nlub twórcą aplikacji: " +
                         "\nmaciej.cmiel.S@ee.pw.edu.pl");
             } else if (jsonResponse.startsWith("Brak")) {
-                mWrongDataTextView.setVisibility(View.VISIBLE);
+                wrongDataTextView.setVisibility(View.VISIBLE);
                 jsonResponse = jsonResponse.replace("Proszę skontaktować się z isod.wsparcie@iem.pw.edu.pl", " ");
-                mWrongDataTextView.setText(jsonResponse);
+                wrongDataTextView.setText(jsonResponse);
             } else {
 
                 // set the days container to be visible
                 days.setVisibility(View.VISIBLE);
 
-                mJsonResponseToGo = jsonResponse;
+                jsonResponseToGo = jsonResponse;
 
                 //Find the view that shows each day
                 TextView monday = (TextView) findViewById(R.id.monday);
@@ -123,7 +123,7 @@ public class DayChoiceActivity extends AppCompatActivity
                         // create new Intent to open TimetableActivity
                         Intent dayIntent = new Intent(DayChoiceActivity.this, TimetableActivity.class);
                         dayIntent.putExtra("DAY_OF_WEEK", 1);
-                        dayIntent.putExtra("JSON_RESPONSE", mJsonResponseToGo);
+                        dayIntent.putExtra("JSON_RESPONSE", jsonResponseToGo);
 
                         //start new activity
                         startActivity(dayIntent);
@@ -136,7 +136,7 @@ public class DayChoiceActivity extends AppCompatActivity
                     public void onClick(View view) {
                         Intent dayIntent = new Intent(DayChoiceActivity.this, TimetableActivity.class);
                         dayIntent.putExtra("DAY_OF_WEEK", 2);
-                        dayIntent.putExtra("JSON_RESPONSE", mJsonResponseToGo);
+                        dayIntent.putExtra("JSON_RESPONSE", jsonResponseToGo);
 
                         startActivity(dayIntent);
                     }
@@ -149,7 +149,7 @@ public class DayChoiceActivity extends AppCompatActivity
                     public void onClick(View view) {
                         Intent dayIntent = new Intent(DayChoiceActivity.this, TimetableActivity.class);
                         dayIntent.putExtra("DAY_OF_WEEK", 3);
-                        dayIntent.putExtra("JSON_RESPONSE", mJsonResponseToGo);
+                        dayIntent.putExtra("JSON_RESPONSE", jsonResponseToGo);
 
                         startActivity(dayIntent);
                     }
@@ -162,7 +162,7 @@ public class DayChoiceActivity extends AppCompatActivity
                     public void onClick(View view) {
                         Intent dayIntent = new Intent(DayChoiceActivity.this, TimetableActivity.class);
                         dayIntent.putExtra("DAY_OF_WEEK", 4);
-                        dayIntent.putExtra("JSON_RESPONSE", mJsonResponseToGo);
+                        dayIntent.putExtra("JSON_RESPONSE", jsonResponseToGo);
 
                         startActivity(dayIntent);
                     }
@@ -175,7 +175,7 @@ public class DayChoiceActivity extends AppCompatActivity
                     public void onClick(View view) {
                         Intent dayIntent = new Intent(DayChoiceActivity.this, TimetableActivity.class);
                         dayIntent.putExtra("DAY_OF_WEEK", 5);
-                        dayIntent.putExtra("JSON_RESPONSE", mJsonResponseToGo);
+                        dayIntent.putExtra("JSON_RESPONSE", jsonResponseToGo);
 
                         startActivity(dayIntent);
                     }
@@ -190,7 +190,7 @@ public class DayChoiceActivity extends AppCompatActivity
     @Override
     public void onLoaderReset(Loader<String> loader) {
         // Loader reset, so we can clear out our existing data.
-        mJsonResponseToGo = "";
+        jsonResponseToGo = "";
     }
 
 

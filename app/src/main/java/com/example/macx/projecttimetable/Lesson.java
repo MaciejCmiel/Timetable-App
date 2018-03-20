@@ -7,14 +7,14 @@ package com.example.macx.projecttimetable;
 
 public class Lesson {
 
-    private String mSubjectName;
-    private String mLecturer;
-    private String mLocation;
-    private String mStartTime;
-    private String mEndTime;
-    private String mTypeOfClasses;
-    private int mDayOfWeek;
-    private String mCycle;
+    private String subjectName;
+    private String lecturer;
+    private String location;
+    private String startTime;
+    private String endTime;
+    private String typeOfClasses;
+    private int dayOfWeek;
+    private String cycle;
 
     /**
      * Create a new TimeInterval object.
@@ -29,14 +29,14 @@ public class Lesson {
      */
     public Lesson(int dayOfWeek, String startTime, String endTime, String subjectName, String lecturer, String location, String typeOfClasses, String cycle) {
 
-        mDayOfWeek = dayOfWeek;
-        mStartTime = startTime;
-        mEndTime = endTime;
-        mSubjectName = subjectName;
-        mLecturer = lecturer;
-        mLocation = location;
-        mTypeOfClasses = typeOfClasses;
-        mCycle = cycle;
+        this.dayOfWeek = dayOfWeek;
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.subjectName = subjectName;
+        this.lecturer = lecturer;
+        this.location = location;
+        this.typeOfClasses = typeOfClasses;
+        this.cycle = cycle;
     }
 
 
@@ -44,56 +44,50 @@ public class Lesson {
      * Get subject of classes.
      */
     public String getSubjectName() {
-        return mSubjectName;
+        return subjectName;
     }
 
     /**
      * Get name of lecturer.
      */
     public String getLecturer() {
-        return mLecturer;
+        return lecturer;
     }
 
     /**
      * Get location
      */
     public String getLocation() {
-        return mLocation;
+        return location;
     }
 
     /**
      * Get start time
      */
     public String getStartTime() {
-        return mStartTime;
+        return startTime;
     }
 
     /**
      * Get end time
      */
     public String getEndTime() {
-        return mEndTime;
+        return endTime;
     }
 
-    /**
-     * Get day of week
-     */
-    public int getDayOfWeek() {
-        return mDayOfWeek;
-    }
 
     /**
      * Get type of classes
      */
     public String getTypeOfClasses() {
-        return mTypeOfClasses;
+        return typeOfClasses;
     }
 
     /**
      * Get cycle
      */
     public String getCycle() {
-        return mCycle;
+        return cycle;
     }
 
 

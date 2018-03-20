@@ -1,10 +1,7 @@
 package com.example.macx.projecttimetable;
 
-import android.app.LoaderManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -19,9 +16,9 @@ import java.util.ArrayList;
 public class TimetableActivity extends AppCompatActivity {
 
     /** TextView that is displayed when the list is empty */
-    private TextView mEmptyStateTextView;
+    private TextView emptyStateTextView;
     /** ImageView that is displayed when the list is empty */
-    private ImageView mEmptyImageView;
+    private ImageView emptyImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,11 +33,11 @@ public class TimetableActivity extends AppCompatActivity {
         // Find a reference to the {@link ListView} in the layout
         ListView dayListView = (ListView) findViewById(R.id.list);
 
-        mEmptyImageView = (ImageView) findViewById(R.id.empty_state_image);
-        dayListView.setEmptyView(mEmptyImageView);
+        emptyImageView = (ImageView) findViewById(R.id.empty_state_image);
+        dayListView.setEmptyView(emptyImageView);
 
-        mEmptyStateTextView = (TextView) findViewById(R.id.empty_text_view);
-        dayListView.setEmptyView(mEmptyStateTextView);
+        emptyStateTextView = (TextView) findViewById(R.id.empty_text_view);
+        dayListView.setEmptyView(emptyStateTextView);
 
 
         if (lessons.size() != 0) {
@@ -53,9 +50,9 @@ public class TimetableActivity extends AppCompatActivity {
 
         } else {
 
-            // Set empty state text to display "Nie masz tego dnia żadnych zajęć. Miłego Dnia!"
-            mEmptyStateTextView.setText(R.string.no_lessons_for_today);
-            mEmptyImageView.setImageResource(R.drawable.wink_smile);
+            // Set empty state text to display
+            emptyStateTextView.setText(R.string.no_lessons_for_today);
+            emptyImageView.setImageResource(R.drawable.wink_smile);
         }
 
 

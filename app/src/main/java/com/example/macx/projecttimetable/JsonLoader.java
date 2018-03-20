@@ -16,7 +16,7 @@ public class JsonLoader extends AsyncTaskLoader<String> {
     /**
      * Query URL
      */
-    private String mUrl;
+    private String url;
 
     /**
      * Constructs a new {@link JsonLoader}.
@@ -26,7 +26,7 @@ public class JsonLoader extends AsyncTaskLoader<String> {
      */
     public JsonLoader(Context context, String url) {
         super(context);
-        mUrl = url;
+        this.url = url;
     }
 
     @Override
@@ -38,12 +38,12 @@ public class JsonLoader extends AsyncTaskLoader<String> {
     @Override
     public String loadInBackground() {
         Log.i(LOG_TAG, "TEST: calling loadInBackground ");
-        if (mUrl == null) {
+        if (url == null) {
             return null;
         }
 
-        // Perform the network request, parse the response, and extract a list of earthquakes.
-        String jsonResponseToGo = QueryUtils.getJsonResponse(mUrl);
+        // Perform the network request, get the JSON response, and return it as a string
+        String jsonResponseToGo = QueryUtils.getJsonResponse(url);
         return jsonResponseToGo;
     }
 }
