@@ -10,20 +10,18 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 /**
- * Created by MacX on 2017-12-14.
- * An {@link LessonAdapter} knows how to create a list item layout for each Lesson
- * in the data source (a list of {@link Lesson} objects).
+ * Created by MacX on 2018-04-08.
  */
 
-public class LessonAdapter extends ArrayAdapter<Lesson> {
+public class WidgetLessonAdapter extends ArrayAdapter<Lesson> {
 
-    public LessonAdapter(Activity context, ArrayList<Lesson> lessons) {
+    public WidgetLessonAdapter(Activity context, ArrayList<Lesson> lessons) {
         super(context, 0, lessons);
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-
+        // Check if the existing view is being reused, otherwise inflate the view
         ViewHolder holder;
 
         // Check if the existing view is being reused, otherwise inflate the view

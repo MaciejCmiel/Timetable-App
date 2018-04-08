@@ -55,6 +55,7 @@ public class TimetableActivity extends AppCompatActivity {
             // Set the adapter on the {@link ListView}
             // so the list can be populated in the user interface
             dayListView.setAdapter(itemsAdapter);
+            //views.setRemoteAdapter(itemsAdapter) <-- for widget
 
         } else {
 
