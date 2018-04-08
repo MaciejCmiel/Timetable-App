@@ -1,6 +1,5 @@
 package com.example.macx.projecttimetable;
 
-import android.os.AsyncTask;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -17,9 +16,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
-import java.util.List;
 
-import static com.example.macx.projecttimetable.DayChoiceActivity.LOG_TAG;
+import static com.example.macx.projecttimetable.activities.DayChoiceActivity.LOG_TAG;
 
 
 /**

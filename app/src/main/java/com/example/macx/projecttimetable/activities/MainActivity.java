@@ -1,4 +1,4 @@
-package com.example.macx.projecttimetable;
+package com.example.macx.projecttimetable.activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +12,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.macx.projecttimetable.R;
 
 public class MainActivity extends AppCompatActivity {
 
