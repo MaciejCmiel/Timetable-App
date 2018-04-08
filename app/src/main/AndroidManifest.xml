@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,11 +22,11 @@
         </activity>
 
         <activity
-            android:name=".TimetableActivity"
+            android:name=".activities.TimetableActivity"
             android:label="@string/timetable" />
 
         <activity
-            android:name=".DayChoiceActivity"
+            android:name=".activities.DayChoiceActivity"
             android:label="@string/day_choice" />
 
     </application>

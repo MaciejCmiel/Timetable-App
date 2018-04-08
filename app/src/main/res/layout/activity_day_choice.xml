@@ -45,7 +45,7 @@
             android:background="@drawable/day_of_week"
             android:text="@string/day_3" />
 
-        <TextView
+        <Button
             android:id="@+id/thursday"
             style="@style/CategoryStyle"
             android:background="@drawable/day_of_week"

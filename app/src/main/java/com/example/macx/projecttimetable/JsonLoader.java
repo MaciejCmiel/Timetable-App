@@ -4,6 +4,8 @@ import android.content.AsyncTaskLoader;
 import android.content.Context;
 import android.util.Log;
 
+import com.example.macx.projecttimetable.activities.DayChoiceActivity;
+
 
 /**
  * Created by MacX on 2017-12-30.

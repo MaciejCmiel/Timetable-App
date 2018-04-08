@@ -1,10 +1,15 @@
-package com.example.macx.projecttimetable;
+package com.example.macx.projecttimetable.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.example.macx.projecttimetable.Lesson;
+import com.example.macx.projecttimetable.LessonAdapter;
+import com.example.macx.projecttimetable.QueryUtils;
+import com.example.macx.projecttimetable.R;
 
 import java.util.ArrayList;
 

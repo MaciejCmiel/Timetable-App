@@ -1,4 +1,4 @@
-package com.example.macx.projecttimetable;
+package com.example.macx.projecttimetable.activities;
 
 import android.app.LoaderManager;
 import android.content.Context;
@@ -11,6 +11,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+
+import com.example.macx.projecttimetable.JsonLoader;
+import com.example.macx.projecttimetable.R;
 
 
 /**
