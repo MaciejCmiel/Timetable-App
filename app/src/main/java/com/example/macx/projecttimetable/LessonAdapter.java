@@ -23,36 +23,35 @@ public class LessonAdapter extends ArrayAdapter<Lesson> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+
+        ViewHolder holder;
+
         // Check if the existing view is being reused, otherwise inflate the view
-        View listItemView = convertView;
-        if (listItemView == null) {
-            listItemView = LayoutInflater.from(getContext()).inflate(
+        if (convertView == null) {
+            convertView = LayoutInflater.from(getContext()).inflate(
                     R.layout.subject_list_item_new, parent, false);
+
+            holder = new ViewHolder();
+            holder.subjectTextView =  convertView.findViewById(R.id.subject_name_text_view);
+            holder.lecturerTextView =  convertView.findViewById(R.id.lecturer_text_view);
+            holder.locationTextView =  convertView.findViewById(R.id.location_text_view);
+            holder.typeOfClassesTextView =  convertView.findViewById(R.id.type_of_classes);
+            holder.timeTextView =  convertView.findViewById(R.id.time_text_view);
+            holder.cycleTextView =  convertView.findViewById(R.id.cycle_text_view);
+        } else{
+            holder = (ViewHolder) convertView.getTag();
         }
 
         Lesson currentLesson = getItem(position);
 
-        // Find the TextView in subject_list_item_new layout with id subject_name_text_view
-        TextView subjectTextView = (TextView) listItemView.findViewById(R.id.subject_name_text_view);
-        // get the subject name from the current Lesson and set this text to TextView
-        subjectTextView.setText(currentLesson.getSubjectName());
+        holder.subjectTextView.setText(currentLesson.getSubjectName());
+        holder.lecturerTextView.setText(currentLesson.getLecturer());
+        holder.locationTextView.setText(currentLesson.getLocation());
+        holder.typeOfClassesTextView.setText(currentLesson.getTypeOfClasses());
+        holder.timeTextView.setText(formatTime(currentLesson.getStartTime(), currentLesson.getEndTime()));
+        holder.cycleTextView.setText(currentLesson.getCycle());
 
-        TextView lecturerTextView = (TextView) listItemView.findViewById(R.id.lecturer_text_view);
-        lecturerTextView.setText(currentLesson.getLecturer());
-
-        TextView locationTextView = (TextView) listItemView.findViewById(R.id.location_text_view);
-        locationTextView.setText(currentLesson.getLocation());
-
-        TextView typeOfClassesTextView = (TextView) listItemView.findViewById(R.id.type_of_classes);
-        typeOfClassesTextView.setText(currentLesson.getTypeOfClasses());
-
-        TextView timeTextView = (TextView) listItemView.findViewById(R.id.time_text_view);
-        timeTextView.setText(formatTime(currentLesson.getStartTime(), currentLesson.getEndTime()));
-
-        TextView cycleTextView = (TextView) listItemView.findViewById(R.id.cycle_text_view);
-        cycleTextView.setText(currentLesson.getCycle());
-
-        return listItemView;
+        return convertView;
     }
 
     /**
@@ -67,5 +66,13 @@ public class LessonAdapter extends ArrayAdapter<Lesson> {
         return (startTime + "-" + endTime);
     }
 
+    static class ViewHolder {
+        private TextView subjectTextView;
+        private TextView lecturerTextView;
+        private TextView locationTextView;
+        private TextView typeOfClassesTextView;
+        private TextView timeTextView;
+        private TextView cycleTextView;
+    }
 
 }
