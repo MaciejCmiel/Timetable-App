@@ -18,8 +18,8 @@ import com.example.macx.projecttimetable.R;
 public class MainActivity extends AppCompatActivity {
 
 
-    Spinner semesterSpinner;
-    String chosenSemester;
+    private Spinner semesterSpinner;
+    private String chosenSemester;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 TextView toastText = (TextView) view;
-                Toast.makeText(getApplicationContext(), "Selected: " + toastText.getText(), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), "Selected: " + toastText.getText(), Toast.LENGTH_SHORT).show();
                 chosenSemester = (String) toastText.getText();
             }
 
