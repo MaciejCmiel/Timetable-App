@@ -53,5 +53,7 @@
 
     <!-- hint for API key field [CHAR LIMIT=20] -->
     <string name="apikey_hint">Podaj swój klucz API</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
 
 </resources>
