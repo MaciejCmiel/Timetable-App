@@ -17,29 +17,6 @@ public class WidgetProvider extends AppWidgetProvider {
 
     static void updateAppWidget(Context context, AppWidgetManager appWidgetManager, int appWidgetId) {
 
-        /*
-        // tutorialspoint suggestion
-        //PendingIntent pending = PendingIntent.getActivity(context, 0, intent, 0);
-        String time = "10:00 - 11:00";
-        String name = "Automatyka";
-        String localizatoin = "GG 306";
-        String type = "W";
-        String cycle = "I połowa sem.";
-
-        // Construct the RemoteViews object
-        RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget);
-
-
-        views.setTextViewText(R.id.time_text_view, time);
-
-        views.setTextViewText(R.id.subject_name_text_view, name);
-        views.setTextViewText(R.id.location_text_view, localizatoin);
-        views.setTextViewText(R.id.type_of_classes, type);
-        views.setTextViewText(R.id.cycle_text_view, cycle);
-
-        // Instruct the widget manager to update the widget
-        appWidgetManager.updateAppWidget(appWidgetId, views);
-        */
 
     }
 
