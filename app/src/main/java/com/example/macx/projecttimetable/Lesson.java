@@ -27,7 +27,8 @@ public class Lesson {
      * @param typeOfClasses is short name for type ex W - wykład,
      * @param cycle         represents cycle of clases, ex I połowa sem.
      */
-    public Lesson(int dayOfWeek, String startTime, String endTime, String subjectName, String lecturer, String location, String typeOfClasses, String cycle) {
+    public Lesson(int dayOfWeek, String startTime, String endTime, String subjectName, String lecturer,
+                  String location, String typeOfClasses, String cycle) {
 
         this.dayOfWeek = dayOfWeek;
         this.startTime = startTime;

@@ -6,6 +6,9 @@ import android.util.Log;
 
 import com.example.macx.projecttimetable.activities.DayChoiceActivity;
 
+import java.io.File;
+import java.io.FileOutputStream;
+
 
 /**
  * Created by MacX on 2017-12-30.
@@ -46,6 +49,20 @@ public class JsonLoader extends AsyncTaskLoader<String> {
 
         // Perform the network request, get the JSON response, and return it as a string
         String jsonResponseToGo = QueryUtils.getJsonResponse(url);
+
+        FileOutputStream outputStream;
+        Context ctx = getContext();
+
+        try {
+            outputStream = ctx.openFileOutput("JSON_File", Context.MODE_PRIVATE);
+            outputStream.write(jsonResponseToGo.getBytes());
+            outputStream.close();
+            Log.i(JsonLoader.class.getName(), "TEST: file write ");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         return jsonResponseToGo;
     }
 }
