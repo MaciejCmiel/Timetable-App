@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Timetable Project</string>
+    <string name="app_name">EE Plan</string>
     <string name="timetable">Plan Lekcji</string>
     <string name="day_choice">Wybór dnia tygodnia</string>
 
@@ -28,20 +28,13 @@
         <item>2019Z</item>
     </string-array>
 
-    <!-- Category name for phrases [CHAR LIMIT=20] -->
     <string name="day_1">Poniedziałek</string>
-
-    <!-- Category name for the vocabulary words for colors [CHAR LIMIT=20] -->
     <string name="day_2">Wtorek</string>
-
-    <!-- Category name for the vocabulary words for numbers [CHAR LIMIT=20] -->
     <string name="day_3">Środa</string>
-
-    <!-- Category name for the vocabulary words for family members [CHAR LIMIT=20] -->
     <string name="day_4">Czwartek</string>
-
-    <!-- Category name for the vocabulary words for family members [CHAR LIMIT=20] -->
     <string name="day_5">Piątek</string>
+    <string name="day_6">Sobota</string>
+    <string name="day_7">Niedziela</string>
 
     <string name="no_lessons_for_today">Nie masz tego dnia żadnych zajęć. Miłego dnia!</string>
 
@@ -53,7 +46,12 @@
 
     <!-- hint for API key field [CHAR LIMIT=20] -->
     <string name="apikey_hint">Podaj swój klucz API</string>
-    <string name="appwidget_text">EXAMPLE</string>
     <string name="add_widget">Add widget</string>
+    <string name="info">Niepoprawny login lub klucz API\n
+        Sprawdź wprowadzone dane\n
+        \n
+        W Przypadku dalszych problemów
+    \nskontaktuj się z: \nisod.wsparcie@iem.pw.edu.pl
+    </string>
 
 </resources>

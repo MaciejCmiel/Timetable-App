@@ -74,7 +74,7 @@
                     android:gravity="end"
                     android:paddingRight="16dp"
                     android:textAppearance="?android:textAppearanceSmall"
-                    android:textColor="@android:color/darker_gray"
+                    android:textColor="@android:color/white"
                     tools:text="W" />
 
                 <TextView
@@ -84,7 +84,7 @@
                     android:gravity="end"
                     android:paddingRight="16dp"
                     android:textAppearance="?android:textAppearanceSmall"
-                    android:textColor="@android:color/darker_gray"
+                    android:textColor="@android:color/white"
                     tools:text="I połowa sem." />
 
                 <TextView
@@ -94,7 +94,7 @@
                     android:gravity="end"
                     android:paddingRight="16dp"
                     android:textAppearance="?android:textAppearanceSmall"
-                    android:textColor="@android:color/darker_gray"
+                    android:textColor="@android:color/white"
                     tools:text="GG 306" />
 
             </LinearLayout>

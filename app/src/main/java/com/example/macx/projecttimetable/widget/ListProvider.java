@@ -37,8 +37,6 @@ public class ListProvider implements RemoteViewsFactory {
     private void populateLessons(String jsonResponse) {
 
         int day = Calendar.getInstance().get(Calendar.DAY_OF_WEEK);
-
-        Log.i(ListProvider.class.getName(), "TEST: day = " + day);
         lessons = QueryUtils.extractLessons(day, jsonResponse);
     }
 
@@ -56,10 +54,7 @@ public class ListProvider implements RemoteViewsFactory {
     public RemoteViews getViewAt(int position) {
         final RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget_subject_list_item);
 
-        Log.i(ListProvider.class.getName(), "TEST: getViewAt");
-
         Lesson currentLesson = lessons.get(position);
-
         views.setTextViewText(R.id.time_text_view, (formatTime(currentLesson.getStartTime(), currentLesson.getEndTime())));
         views.setTextViewText(R.id.subject_name_text_view, currentLesson.getSubjectName());
         views.setTextViewText(R.id.location_text_view, currentLesson.getLocation());

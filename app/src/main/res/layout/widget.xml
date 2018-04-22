@@ -5,6 +5,16 @@
     android:orientation="vertical"
     android:background="@drawable/widget_background" >
 
+    <TextView
+        android:id="@+id/day_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text = "Poniedziałek"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:background="@drawable/widget_background"
+        android:textStyle="bold"
+        android:paddingVertical="8dp"
+        android:gravity="center"/>
     <ListView
         android:id="@+id/list_view"
         android:layout_width="match_parent"
@@ -16,7 +26,7 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:text="EMPTY"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:textSize="20sp"
         android:visibility="gone" />
 

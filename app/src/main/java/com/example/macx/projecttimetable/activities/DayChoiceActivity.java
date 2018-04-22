@@ -97,10 +97,7 @@ public class DayChoiceActivity extends AppCompatActivity
 
             if (jsonResponse.startsWith("Exception")) {
                 wrongDataTextView.setVisibility(View.VISIBLE);
-                wrongDataTextView.setText(jsonResponse + "\n \n Skontaktuj się z:  " +
-                        "isod.wsparcie@iem.pw.edu.pl" +
-                        "\nlub twórcą aplikacji: " +
-                        "\nmaciej.cmiel.S@ee.pw.edu.pl");
+                wrongDataTextView.setText(getString(R.string.info));
             } else if (jsonResponse.startsWith("Brak")) {
                 wrongDataTextView.setVisibility(View.VISIBLE);
                 jsonResponse = jsonResponse.replace("Proszę skontaktować się z isod.wsparcie@iem.pw.edu.pl", " ");
@@ -192,7 +189,6 @@ public class DayChoiceActivity extends AppCompatActivity
 
     @Override
     public void onLoaderReset(Loader<String> loader) {
-        // Loader reset, so we can clear out our existing data.
         jsonResponseToGo = "";
     }
 
