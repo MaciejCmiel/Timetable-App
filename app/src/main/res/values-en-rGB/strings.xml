@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Timetable Project</string>
-    <string name="no_lessons_for_today">You don\'t have lessons today. Enjoy your day!</string>
+    <string name="app_name">Lesson plan</string>
+    <string name="no_lessons_for_today">Looks like you have free time today</string>
     <string name="no_internet_connection">No internet connection. Make sure Wi-fi or cellular data is on.</string>
 
     <string name="timetable">Lesson Timetable</string>

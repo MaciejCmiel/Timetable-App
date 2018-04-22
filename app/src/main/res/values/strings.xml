@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">EE Plan</string>
+    <string name="app_name">Plan Lekcji</string>
     <string name="timetable">Plan Lekcji</string>
     <string name="day_choice">Wybór dnia tygodnia</string>
 
@@ -36,7 +36,7 @@
     <string name="day_6">Sobota</string>
     <string name="day_7">Niedziela</string>
 
-    <string name="no_lessons_for_today">Nie masz tego dnia żadnych zajęć. Miłego dnia!</string>
+    <string name="no_lessons_for_today">Wygląda na to że dziś masz wolne </string>
 
     <string name="no_internet_connection">Nie można połączyć się z serwerem.
         \nUpewnij się czy masz włączone Wi-fi lub przesył danych.</string>
