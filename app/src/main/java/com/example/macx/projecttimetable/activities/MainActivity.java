@@ -37,12 +37,13 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 TextView toastText = (TextView) view;
                 //Toast.makeText(getApplicationContext(), "Selected: " + toastText.getText(), Toast.LENGTH_SHORT).show();
-                chosenSemester = (String) toastText.getText();
+                if (toastText != null) {
+                    chosenSemester = (String) toastText.getText();
+                }
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
             }
         });
 
