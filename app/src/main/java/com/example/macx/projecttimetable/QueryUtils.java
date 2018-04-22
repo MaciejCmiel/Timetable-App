@@ -171,7 +171,7 @@ public final class QueryUtils {
 
                 // check if dayOfWeek is equal to chosen day by the user
                 // if yes then extract data for this lesson and add to the list
-                if (dayOfWeek == chosenDayOfWeek) {
+                if (dayOfWeek + 1 == chosenDayOfWeek) {
                     JSONArray teachers = currentLesson.getJSONArray("teachers");
                     String lecturer;
 

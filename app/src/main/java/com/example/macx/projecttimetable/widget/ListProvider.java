@@ -13,6 +13,8 @@ import com.example.macx.projecttimetable.R;
 
 import java.io.FileInputStream;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 
 /**
@@ -34,7 +36,10 @@ public class ListProvider implements RemoteViewsFactory {
 
     private void populateLessons(String jsonResponse) {
 
-        lessons = QueryUtils.extractLessons(1, jsonResponse);
+        int day = Calendar.getInstance().get(Calendar.DAY_OF_WEEK);
+
+        Log.i(ListProvider.class.getName(), "TEST: day = " + day);
+        lessons = QueryUtils.extractLessons(day, jsonResponse);
     }
 
     @Override

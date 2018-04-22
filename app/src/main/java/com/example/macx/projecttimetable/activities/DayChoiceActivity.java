@@ -125,7 +125,7 @@ public class DayChoiceActivity extends AppCompatActivity
 
                         // create new Intent to open TimetableActivity
                         Intent dayIntent = new Intent(DayChoiceActivity.this, TimetableActivity.class);
-                        dayIntent.putExtra("DAY_OF_WEEK", 1);
+                        dayIntent.putExtra("DAY_OF_WEEK", 2);
                         dayIntent.putExtra("JSON_RESPONSE", jsonResponseToGo);
 
                         //start new activity
@@ -138,7 +138,7 @@ public class DayChoiceActivity extends AppCompatActivity
                     @Override
                     public void onClick(View view) {
                         Intent dayIntent = new Intent(DayChoiceActivity.this, TimetableActivity.class);
-                        dayIntent.putExtra("DAY_OF_WEEK", 2);
+                        dayIntent.putExtra("DAY_OF_WEEK", 3);
                         dayIntent.putExtra("JSON_RESPONSE", jsonResponseToGo);
 
                         startActivity(dayIntent);
@@ -151,7 +151,7 @@ public class DayChoiceActivity extends AppCompatActivity
                     @Override
                     public void onClick(View view) {
                         Intent dayIntent = new Intent(DayChoiceActivity.this, TimetableActivity.class);
-                        dayIntent.putExtra("DAY_OF_WEEK", 3);
+                        dayIntent.putExtra("DAY_OF_WEEK", 4);
                         dayIntent.putExtra("JSON_RESPONSE", jsonResponseToGo);
 
                         startActivity(dayIntent);
@@ -164,7 +164,7 @@ public class DayChoiceActivity extends AppCompatActivity
                     @Override
                     public void onClick(View view) {
                         Intent dayIntent = new Intent(DayChoiceActivity.this, TimetableActivity.class);
-                        dayIntent.putExtra("DAY_OF_WEEK", 4);
+                        dayIntent.putExtra("DAY_OF_WEEK", 5);
                         dayIntent.putExtra("JSON_RESPONSE", jsonResponseToGo);
 
                         startActivity(dayIntent);
@@ -177,7 +177,7 @@ public class DayChoiceActivity extends AppCompatActivity
                     @Override
                     public void onClick(View view) {
                         Intent dayIntent = new Intent(DayChoiceActivity.this, TimetableActivity.class);
-                        dayIntent.putExtra("DAY_OF_WEEK", 5);
+                        dayIntent.putExtra("DAY_OF_WEEK", 6);
                         dayIntent.putExtra("JSON_RESPONSE", jsonResponseToGo);
 
                         startActivity(dayIntent);
