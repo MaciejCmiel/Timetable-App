@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     android:minHeight="80dp">
 
-
     <LinearLayout
         android:id="@+id/text_container_0"
         android:layout_width="wrap_content"
@@ -74,7 +73,7 @@
                     android:gravity="end"
                     android:paddingRight="16dp"
                     android:textAppearance="?android:textAppearanceSmall"
-                    android:textColor="@android:color/white"
+                    android:textColor="@android:color/black"
                     tools:text="W" />
 
                 <TextView
@@ -84,7 +83,7 @@
                     android:gravity="end"
                     android:paddingRight="16dp"
                     android:textAppearance="?android:textAppearanceSmall"
-                    android:textColor="@android:color/white"
+                    android:textColor="@android:color/black"
                     tools:text="I połowa sem." />
 
                 <TextView
@@ -94,7 +93,7 @@
                     android:gravity="end"
                     android:paddingRight="16dp"
                     android:textAppearance="?android:textAppearanceSmall"
-                    android:textColor="@android:color/white"
+                    android:textColor="@android:color/black"
                     tools:text="GG 306" />
 
             </LinearLayout>

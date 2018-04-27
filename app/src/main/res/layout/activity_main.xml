@@ -48,7 +48,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Semestr studiów"
+            android:text="@string/semester_of_study"
             android:textAppearance="?android:textAppearanceMedium"
             android:textColor="@android:color/black" />
 

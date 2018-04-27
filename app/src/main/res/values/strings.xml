@@ -16,6 +16,7 @@
         <item>2019Z</item>
     </string-array>
 
+    <string name="semester_of_study">Semestr studiów</string>
 
     <string-array name="semestr_array">
         <item>2016L</item>
