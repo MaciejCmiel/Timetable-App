@@ -45,7 +45,6 @@ public final class QueryUtils {
     public static String getJsonResponse(String requestUrl) {
 
 
-        Log.i(LOG_TAG, "TEST: calling fetchEarthquakeData");
         // Create URL object
         URL url = createUrl(requestUrl);
 

@@ -11,9 +11,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.view.View.OnClickListener;
 
 import com.example.macx.projecttimetable.JsonLoader;
 import com.example.macx.projecttimetable.R;
+
+import java.net.Inet4Address;
 
 
 /**
@@ -21,7 +24,7 @@ import com.example.macx.projecttimetable.R;
  */
 
 public class DayChoiceActivity extends AppCompatActivity
-        implements LoaderManager.LoaderCallbacks<String> {
+        implements LoaderManager.LoaderCallbacks<String>, OnClickListener {
 
     private static final int JSON_LOADER_ID = 1;
     public static final String LOG_TAG = DayChoiceActivity.class.getName();
@@ -116,75 +119,33 @@ public class DayChoiceActivity extends AppCompatActivity
                 TextView thursday = (TextView) findViewById(R.id.thursday);
                 TextView friday = (TextView) findViewById(R.id.friday);
 
-                monday.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
+                monday.setTag(2);
+                tuesday.setTag(3);
+                wednesday.setTag(4);
+                thursday.setTag(5);
+                friday.setTag(6);
 
-                        // create new Intent to open TimetableActivity
-                        Intent dayIntent = new Intent(DayChoiceActivity.this, TimetableActivity.class);
-                        dayIntent.putExtra("DAY_OF_WEEK", 2);
-                        dayIntent.putExtra("JSON_RESPONSE", jsonResponseToGo);
-
-                        //start new activity
-                        startActivity(dayIntent);
-                    }
-                });
-
-                tuesday.setOnClickListener(new View.OnClickListener() {
-
-                    @Override
-                    public void onClick(View view) {
-                        Intent dayIntent = new Intent(DayChoiceActivity.this, TimetableActivity.class);
-                        dayIntent.putExtra("DAY_OF_WEEK", 3);
-                        dayIntent.putExtra("JSON_RESPONSE", jsonResponseToGo);
-
-                        startActivity(dayIntent);
-                    }
-
-                });
-
-                wednesday.setOnClickListener(new View.OnClickListener() {
-
-                    @Override
-                    public void onClick(View view) {
-                        Intent dayIntent = new Intent(DayChoiceActivity.this, TimetableActivity.class);
-                        dayIntent.putExtra("DAY_OF_WEEK", 4);
-                        dayIntent.putExtra("JSON_RESPONSE", jsonResponseToGo);
-
-                        startActivity(dayIntent);
-                    }
-
-                });
-
-                thursday.setOnClickListener(new View.OnClickListener() {
-
-                    @Override
-                    public void onClick(View view) {
-                        Intent dayIntent = new Intent(DayChoiceActivity.this, TimetableActivity.class);
-                        dayIntent.putExtra("DAY_OF_WEEK", 5);
-                        dayIntent.putExtra("JSON_RESPONSE", jsonResponseToGo);
-
-                        startActivity(dayIntent);
-                    }
-
-                });
-
-                friday.setOnClickListener(new View.OnClickListener() {
-
-                    @Override
-                    public void onClick(View view) {
-                        Intent dayIntent = new Intent(DayChoiceActivity.this, TimetableActivity.class);
-                        dayIntent.putExtra("DAY_OF_WEEK", 6);
-                        dayIntent.putExtra("JSON_RESPONSE", jsonResponseToGo);
-
-                        startActivity(dayIntent);
-                    }
-
-                });
-
+                monday.setOnClickListener(this);
+                tuesday.setOnClickListener(this);
+                wednesday.setOnClickListener(this);
+                thursday.setOnClickListener(this);
+                friday.setOnClickListener(this);
             }
         }
     }
+
+    @Override
+    public void onClick(View view) {
+
+        // create new Intent to open TimetableActivity
+        Intent dayIntent = new Intent(DayChoiceActivity.this, TimetableActivity.class);
+        dayIntent.putExtra("DAY_OF_WEEK", (Integer) view.getTag());
+        dayIntent.putExtra("JSON_RESPONSE", jsonResponseToGo);
+
+        //start new activity
+        startActivity(dayIntent);
+    }
+
 
 
     @Override
